@@ -9,14 +9,7 @@ import java.nio.file.Path;
 
 
 public class FileReader {
-
-    public static void main(String[] args) {
-        Path path = Path.of("/Users/onisim_albarov/IdeaProjects/stage1-module7-nio-task1/src/main/resources/Profile.txt");
-        Profile p = getDataFromFile(path.toFile());
-        System.out.println(p);
-    }
-
-    public static Profile getDataFromFile(File file) {
+    public Profile getDataFromFile(File file) {
         Profile profile = new Profile();
 
         try (RandomAccessFile raf = new RandomAccessFile(file.getAbsolutePath(), "r");
